@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.main_photo {
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    background-image: url('./img/moca.jpg');
+    background-position: center;
+    background-size: 200px;
+    border-radius: 50%;
+
+    /* 중앙 정렬 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.left, .right{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: table;
+}
+
+.left {
+    float: left;
+    /* background-color: yellow; */
+}
+
+.right {
+    float: right;
+    /* background-color: tomato; */
+    
+}
+
+
+.left div:nth-of-type(1), .right div:nth-of-type(1) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('./img/moca.jpg');
+    background-size: cover;
+}
+
+
+.left div:nth-of-type(2), .right div:nth-of-type(2){
+    position: relative;
+    text-align: center;
+    display: table-cell;  
+    vertical-align: middle;
+}
+
+
+.left div:nth-of-type(2):hover {
+    color: red;
+}
+
+
+.left div:nth-of-type(2):hover .left div:nth-of-type(1) {
+    filter: grayscale(100%);
+}
+
+
+
+/* transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0)); */
